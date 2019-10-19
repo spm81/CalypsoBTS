@@ -75,4 +75,12 @@ You should see something like this:
 If something goes wrong, find another ARFCN and try again.
 As soon as you get the transceiver synchronized, just keep it running.
 
+
+# + INFO:
+
 Original link: https://osmocom.org/projects/baseband/wiki/CalypsoBTS
+
+https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/
+https://security-bits.de/research/cellular/lab_setup
+
+
