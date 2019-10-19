@@ -4,7 +4,7 @@ sudo apt-get install build-essential libgmp-dev libx11-6 libx11-dev flex libncur
 sudo apt install libdbi-dev libdbd-sqlite3 libortp-dev build-essential libtool autoconf autoconf-archive automake git-core pkg-config libtalloc-dev libpcsclite-dev libpcap-dev -y
 sudo apt-get install sqlite3 libsqlite3-dev libsctp-dev -y
 sudo apt install libdbi-dev libdbd-sqlite3 build-essential libtool autoconf automake git-core pkg-config libortp-dev libtalloc-dev libpcsclite-dev libsctp-dev libsctp1 libssl-dev libc-ares-dev libgtp-dev libsofia-sip-ua-glib-dev -y
-sudo apt install gcc-arm-none-eabi -y
+#sudo apt install gcc-arm-none-eabi -y
 
 git clone https://github.com/axilirator/gnu-arm-installer.git
 cd gnu-arm-installer
@@ -42,7 +42,8 @@ git clone git://git.osmocom.org/osmocom-bb.git
 cd osmocom-bb
 git pull --rebase
 cd src
-make -e CROSS_TOOL_PREFIX=arm-none-eabi-
+#make -e CROSS_TOOL_PREFIX=arm-none-eabi-
+make
 cd ..
 cd ..
 
