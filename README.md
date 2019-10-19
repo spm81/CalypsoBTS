@@ -3,6 +3,29 @@ Turn cheap Calypso based phone(s) into a GSM BTS
 
 A Script made by me to Install CalypsoBTS on Ubuntu 16.04LTS ( Tested on 16.04 can work on many other versions )
 
+# Hardware
+
+All you need to start playing is an old phone with Calypso baseband chip in it, a serial converter and Linux box.
+Supported phones are listed on the project’s website. I’m including it here for convenience.
+
+Designed + Manufactured by Compal, OEM by Motorola
+
+    MotorolaC115/C117 (E87)
+    MotorolaC123/C121/C118 (E88) — our primary target
+    MotorolaC140/C139 (E86)
+    MotorolaC155 (E99) — our secondary target
+    MotorolaV171 (E68/E69)
+    SonyEricssonJ100i
+
+Designed by Pirelli/Foxconn, manufactured by Foxconn
+
+    Pirelli DP-L10
+
+Designed by Openmoko, manufactured by FIC
+
+    Neo 1973 (GTA01)
+    OpenMoko – Neo Freerunner (GTA02)
+
 # Installation
 ---------------
 git clone https://github.com/spm81/CalypsoBTS.git \
