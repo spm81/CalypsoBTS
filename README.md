@@ -11,9 +11,9 @@ Supported phones are listed on the project’s website. I’m including it here 
 Designed + Manufactured by Compal, OEM by Motorola
 
     MotorolaC115/C117 (E87)
-    MotorolaC123/C121/C118 (E88) — our primary target
+    MotorolaC123/C121/C118 (E88) 
     MotorolaC140/C139 (E86)
-    MotorolaC155 (E99) — our secondary target
+    MotorolaC155 (E99) 
     MotorolaV171 (E68/E69)
     SonyEricssonJ100i
 
