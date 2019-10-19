@@ -1,7 +1,7 @@
 # CalypsoBTS
 Turn cheap Calypso based phone(s) into a GSM BTS
 
-A Script made by me to Install CalypsoBTS on Ubuntu 16.04LTS ( Tested on 16.04 can work on many other versions )
+A Script made by me to Install CalypsoBTS on Ubuntu 16.04LTS ( Not Tested yet )
 
 # Hardware
 
