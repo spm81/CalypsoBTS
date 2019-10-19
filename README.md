@@ -104,7 +104,7 @@ As soon as you get the transceiver synchronized, just keep it running.
 
 Original link: https://osmocom.org/projects/baseband/wiki/CalypsoBTS
 
-[![Demo Video](https%3A%2F%2Fosmocom.org%2Fprojects%2Fbaseband%2Fwiki%2FMotorolaC123&psig=AOvVaw0yLHeLOklhZgw8cul13y9F&ust=1571609587123065)](https://www.youtube.com/embed/ihbRtTzc0NI)
+[![Demo Video](https://osmocom.org/projects/baseband/wiki/MotorolaC123&psig=AOvVaw0yLHeLOklhZgw8cul13y9F&ust=1571609587123065)](https://www.youtube.com/embed/ihbRtTzc0NI)
 
 
 https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/ \
