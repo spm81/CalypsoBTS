@@ -1,5 +1,5 @@
 sudo apt install libtool shtool automake autoconf git-core pkg-config make gcc -y
-sudo apt-get install build-essential libtool libtalloc-dev shtool autoconf automake git-core pkg-config make gcc libpcsclite-dev libgnutls-dev -y
+sudo apt-get install build-essential libtool libtalloc-dev shtool autoconf automake git-core pkg-config make gcc g++ libpcsclite-dev libgnutls-dev -y
 sudo apt-get install build-essential libgmp-dev libx11-6 libx11-dev flex libncurses5 libncurses5-dev libncursesw5 libpcsclite-dev zlib1g-dev libmpfr4 libmpc3 lemon aptitude libtinfo-dev libtool shtool autoconf git-core pkg-config make libmpfr-dev libmpc-dev libtalloc-dev libfftw3-dev libgnutls28-dev libssl1.0-dev libtool-bin libxml2-dev sofia-sip-bin libsofia-sip-ua-dev sofia-sip-bin libncursesw5-dev libncursesw5-dbg bison libgmp3-dev alsa-oss gcc-4.9 g++-4.9 -y
 sudo apt install libdbi-dev libdbd-sqlite3 libortp-dev build-essential libtool autoconf autoconf-archive automake git-core pkg-config libtalloc-dev libpcsclite-dev libpcap-dev -y
 sudo apt-get install sqlite3 libsqlite3-dev libsctp-dev -y
@@ -25,8 +25,6 @@ sudo make install
 sudo ldconfig
 cd ..
 
-
-
 git clone git://git.osmocom.org/osmocom-bb.git
 cd osmocom-bb
 git pull --rebase
@@ -45,6 +43,11 @@ cd ..
 
 git clone git://git.osmocom.org/osmocom-bb.git -b jolly/testing trx
 cd trx/src/
+
+echo "CFLAGS += -DCONFIG_TX_ENABLE" >> target/firmware/Makefile
+#echo "CFLAGS += -DCONFIG_FLASH_WRITE" >> target/firmware/Makefile
+#echo "CFLAGS += -DCONFIG_FLASH_WRITE_LOADER" >> target/firmware/Makefile
+
 make HOST_layer23_CONFARGS=--enable-transceiver
 cd ..
 cd ..
@@ -70,15 +73,15 @@ sudo make install
 sudo ldconfig
 cd ..
 
-wget http://download.savannah.gnu.org/releases/linphone/ortp/sources/ortp-0.22.0.tar.gz
-tar -xvf ortp-0.22.0.tar.gz
-cd ortp-0.22.0/
-./autogen.sh
-./configure
-make
-sudo make install
-sudo ldconfig
-cd ..
+#wget http://download.savannah.gnu.org/releases/linphone/ortp/sources/ortp-0.22.0.tar.gz
+#tar -xvf ortp-0.22.0.tar.gz
+#cd ortp-0.22.0/
+#./autogen.sh
+#./configure
+#make
+#sudo make install
+#sudo ldconfig
+#cd ..
 
 git clone git://git.osmocom.org/libosmo-abis.git
 cd libosmo-abis
@@ -126,15 +129,7 @@ sudo make install
 sudo ldconfig
 cd ..
 
-
-
-
-
-
-
-
-
-sudo apt-get install libssl1.0.0 libssl-dev -y
+sudo apt-get install libssl1.0.0 libssl-dev libpcap -y
 sudo ldconfig
 
 git clone git://git.osmocom.org/openbsc.git
@@ -154,26 +149,21 @@ make
 sudo make install
 cd..
 
+git clone git://git.osmocom.org/openbsc.git
+cd openbsc/openbsc
+autoreconf -fi
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+./configure --enable-smpp
+make
+sudo make install
+sudo ldconfig
+cd ..
+
+sudo apt install php php-sqlite3 libncurses5-dev libjansson-dev uuid-dev sqlite3 libsqlite3-dev libxml2-dev libncurses-dev libedit-dev ntpdate -y 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# +INFO 
+https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/
+https://security-bits.de/research/cellular/lab_setup
