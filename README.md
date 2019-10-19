@@ -5,7 +5,7 @@ A Script made by me to Install CalypsoBTS on Ubuntu 16.04LTS ( Tested on 16.04 c
 
 # Installation
 ---------------
-git clone https://github.com/spm81/CalypsoBTS.git\
+git clone https://github.com/spm81/CalypsoBTS.git \
 cd CalypsoBTS/\
 sudo chmod +x Install_Calypso_BTS.sh\
 ./Install_Calypso_BTS.sh
@@ -23,12 +23,12 @@ Usage
 
 1. First, you need to run the transceiver firmware:
 
- cd trx/src/
+ cd trx/src/\
  host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 -c target/firmware/board/compal_e88/trx.highram.bin
 
 Additionally, if you have two (or more) phones, load the firmware to a second phone (optional):
 
- cd trx/src/
+ cd trx/src/\
  host/osmocon/osmocon -m c123xor -p /dev/ttyUSB1 -s /tmp/osmocom_l2.2 -c target/firmware/board/compal_e88/trx.highram.bin
 
 2. The host application could be found in 'src/host/layer23/transceiver/':
