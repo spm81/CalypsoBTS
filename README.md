@@ -5,9 +5,9 @@ A Script made by me to Install CalypsoBTS on Ubuntu 16.04LTS ( Tested on 16.04 c
 
 # Installation
 
-git clone https://github.com/spm81/CalypsoBTS.git
-cd CalypsoBTS/
-sudo chmod +x Install_Calypso_BTS.sh 
+git clone https://github.com/spm81/CalypsoBTS.git__
+cd CalypsoBTS/__
+sudo chmod +x Install_Calypso_BTS.sh
 ./Install_Calypso_BTS.sh
 
 
