@@ -3,7 +3,14 @@ Turn cheap Calypso based phone(s) into a GSM BTS
 
 A Script made by me to Install CalypsoBTS on Ubuntu 16.04LTS ( Tested on 16.04 can work on many other versions )
 
+# Installation
+git clone https://github.com/spm81/CalypsoBTS.git
+cd CalypsoBTS/
+sudo chmod +x Install_Calypso_BTS.sh 
+./Install_Calypso_BTS.sh
 
+
+# Info:
 Clock source
 
 Time-division (TDMA) systems require very accurate counting of the time segments (frames and timeslots) and when they start and stop. Also, multiple base stations within a network must be time-synchronized between themselves to make subscribers able to perform handover operation (switching from one BTS to another). If the towers clocking were out of sync, then communications would falter as each node would be trying to deal with segments that were slightly offset and this would introduce errors. This is why a good clock source is required to operate a base station.
