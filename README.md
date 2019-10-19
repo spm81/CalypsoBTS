@@ -59,16 +59,16 @@ Additionally, if you have two (or more) phones, load the firmware to a second ph
  cd trx/src/host/layer23/src/transceiver/\
  ./transceiver -h
 
-Usage: ./transceiver -a arfcn_sync
-Some useful options:
-  -h   --help             this text
-  -d   --debug MASK       Enable debugging (e.g. -d DL1C:DTRX)
-  -e   --log-level LOGL   Set log level (1=debug, 3=info, 5=notice)
-  -D   --daemonize        For the process into a background daemon
-  -s   --disable-color    Don't use colors in stderr log output
-  -a   --arfcn-sync ARFCN Set ARFCN to sync to
-  -p   --arfcn-sync-pcs   The ARFCN above is PCS
-  -2   --second-phone     Use second phone for TS 1
+Usage: ./transceiver -a arfcn_sync\
+Some useful options:\
+  -h   --help             this text\
+  -d   --debug MASK       Enable debugging (e.g. -d DL1C:DTRX)\
+  -e   --log-level LOGL   Set log level (1=debug, 3=info, 5=notice)\
+  -D   --daemonize        For the process into a background daemon\
+  -s   --disable-color    Don't use colors in stderr log output\
+  -a   --arfcn-sync ARFCN Set ARFCN to sync to\
+  -p   --arfcn-sync-pcs   The ARFCN above is PCS\
+  -2   --second-phone     Use second phone for TS 1\
   -r   --realtime PRIO    Set realtime scheduler with given prio
 
 The --arfcn-sync or --arfcn-sync-pcs are used to specify the ARFCN of a clock source cell. The high priority scheduling is recommended for low-performance PCs.
