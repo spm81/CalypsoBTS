@@ -4,6 +4,7 @@ Turn cheap Calypso based phone(s) into a GSM BTS
 A Script made by me to Install CalypsoBTS on Ubuntu 16.04LTS ( Tested on 16.04 can work on many other versions )
 
 # Installation
+
 git clone https://github.com/spm81/CalypsoBTS.git
 cd CalypsoBTS/
 sudo chmod +x Install_Calypso_BTS.sh 
@@ -22,18 +23,18 @@ Usage
 
 1. First, you need to run the transceiver firmware:
 
-$ cd trx/src/
-$ host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 -c target/firmware/board/compal_e88/trx.highram.bin
+ cd trx/src/
+ host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 -c target/firmware/board/compal_e88/trx.highram.bin
 
 Additionally, if you have two (or more) phones, load the firmware to a second phone (optional):
 
-$ cd trx/src/
-$ host/osmocon/osmocon -m c123xor -p /dev/ttyUSB1 -s /tmp/osmocom_l2.2 -c target/firmware/board/compal_e88/trx.highram.bin
+ cd trx/src/
+ host/osmocon/osmocon -m c123xor -p /dev/ttyUSB1 -s /tmp/osmocom_l2.2 -c target/firmware/board/compal_e88/trx.highram.bin
 
 2. The host application could be found in 'src/host/layer23/transceiver/':
 
-$ cd trx/src/host/layer23/src/transceiver/
-$ ./transceiver -h
+ cd trx/src/host/layer23/src/transceiver/
+ ./transceiver -h
 
 Usage: ./transceiver -a arfcn_sync
 Some useful options:
@@ -53,7 +54,7 @@ The --arfcn-sync or --arfcn-sync-pcs are used to specify the ARFCN of a clock so
 
 If you have two (or more phones), add '-2' option.
 
-$ ./transceiver -a <ARFCN>
+ ./transceiver -a <ARFCN>
 
 You should see something like this:
 
@@ -82,5 +83,5 @@ Original link: https://osmocom.org/projects/baseband/wiki/CalypsoBTS
 
 https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/
 https://security-bits.de/research/cellular/lab_setup
-
+https://weekly-geekly.github.io/articles/331406/index.html
 
