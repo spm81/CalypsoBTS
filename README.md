@@ -81,7 +81,7 @@ As soon as you get the transceiver synchronized, just keep it running.
 
 Original link: https://osmocom.org/projects/baseband/wiki/CalypsoBTS
 
-https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/\
+https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/ \
 https://security-bits.de/research/cellular/lab_setup\
 https://weekly-geekly.github.io/articles/331406/index.html
 
