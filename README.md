@@ -33,7 +33,7 @@ Additionally, if you have two (or more) phones, load the firmware to a second ph
 
 2. The host application could be found in 'src/host/layer23/transceiver/':
 
- cd trx/src/host/layer23/src/transceiver/
+ cd trx/src/host/layer23/src/transceiver/\
  ./transceiver -h
 
 Usage: ./transceiver -a arfcn_sync
@@ -58,22 +58,22 @@ If you have two (or more phones), add '-2' option.
 
 You should see something like this:
 
-<0012> l1ctl.c:383 Reset received: Starting sync.
-<0012> l1ctl.c:338 Sync acquired, setting BTS mode ...
-<0011> trx.c:194 TRX CLK Indication 1255520
-<0011> trx.c:194 TRX CLK Indication 1255571
-<0011> trx.c:194 TRX CLK Indication 1255622
-<0011> trx.c:194 TRX CLK Indication 1255673
-<0011> trx.c:194 TRX CLK Indication 1255724
-<0011> trx.c:194 TRX CLK Indication 1255775
-<0011> trx.c:194 TRX CLK Indication 1255826
-<0011> trx.c:194 TRX CLK Indication 1255877
-<0011> trx.c:194 TRX CLK Indication 1255928
-<0011> trx.c:194 TRX CLK Indication 1255979
-<0011> trx.c:194 TRX CLK Indication 1256030
-<0011> trx.c:194 TRX CLK Indication 1256081
+<0012> l1ctl.c:383 Reset received: Starting sync.\
+<0012> l1ctl.c:338 Sync acquired, setting BTS mode ...\
+<0011> trx.c:194 TRX CLK Indication 1255520\
+<0011> trx.c:194 TRX CLK Indication 1255571\
+<0011> trx.c:194 TRX CLK Indication 1255622\
+<0011> trx.c:194 TRX CLK Indication 1255673\
+<0011> trx.c:194 TRX CLK Indication 1255724\
+<0011> trx.c:194 TRX CLK Indication 1255775\
+<0011> trx.c:194 TRX CLK Indication 1255826\
+<0011> trx.c:194 TRX CLK Indication 1255877\
+<0011> trx.c:194 TRX CLK Indication 1255928\
+<0011> trx.c:194 TRX CLK Indication 1255979\
+<0011> trx.c:194 TRX CLK Indication 1256030\
+<0011> trx.c:194 TRX CLK Indication 1256081\
 
-If something goes wrong, find another ARFCN and try again.
+If something goes wrong, find another ARFCN and try again.\
 As soon as you get the transceiver synchronized, just keep it running.
 
 
@@ -81,7 +81,7 @@ As soon as you get the transceiver synchronized, just keep it running.
 
 Original link: https://osmocom.org/projects/baseband/wiki/CalypsoBTS
 
-https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/
-https://security-bits.de/research/cellular/lab_setup
+https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/\
+https://security-bits.de/research/cellular/lab_setup\
 https://weekly-geekly.github.io/articles/331406/index.html
 
