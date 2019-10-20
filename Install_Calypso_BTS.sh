@@ -26,11 +26,22 @@ sudo chmod 644 ~/./.bashrc
 
 git clone git://git.osmocom.org/libosmocore.git
 cd libosmocore/
+sudo make uninstall
+make distclean
+git pull --rebase
 autoreconf -fi
 ./configure
 make
 sudo make install
-sudo ldconfig -i
+sudo ldconfig
+cd ..
+
+git clone git://git.osmocom.org/libosmo-dsp.git
+cd libosmo-dsp/
+autoreconf -fi
+./configure
+make
+sudo make install
 cd ..
 
 git clone git://git.osmocom.org/osmocom-bb.git trx
@@ -52,14 +63,6 @@ autoreconf -fi
 make
 sudo make install
 sudo ldconfig
-cd ..
-
-git clone git://git.osmocom.org/libosmo-dsp.git
-cd libosmo-dsp/
-autoreconf -fi
-./configure
-make
-sudo make install
 cd ..
 
 tar -xf libdbi-drivers-0.8.3.alterado.tar.gz 
