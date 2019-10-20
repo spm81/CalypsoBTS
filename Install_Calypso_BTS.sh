@@ -6,12 +6,14 @@ sudo apt-get install build-essential libgmp-dev libx11-6 libx11-dev flex libncur
 sudo apt install libdbd-sqlite3 libortp-dev build-essential libtool autoconf autoconf-archive automake git-core pkg-config libtalloc-dev libpcsclite-dev libpcap-dev -y
 sudo apt-get install sqlite3 libsqlite3-dev libsctp-dev -y
 sudo apt-get install gcc-4.9 g++-4.9 -y
+sudo apt install libdbi-dev -y
 sudo apt-get install libssl1.0.0 libssl-dev -y
 sudo apt install php php-sqlite3 libncurses5-dev libjansson-dev uuid-dev sqlite3 libsqlite3-dev libxml2-dev libncurses-dev libedit-dev ntpdate -y 
 sudo apt install libdbd-sqlite3 libortp-dev libtalloc-dev libpcsclite-dev libsctp-dev libsctp1 libc-ares-dev libgtp-dev libsofia-sip-ua-glib-dev libpcap-dev libpcap0.8 libpcap0.8-dbg libpcap0.8-dev -y
 #sudo apt install gcc-arm-none-eabi -y
-sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi gdb-arm-none-eabi openocd -y
-sudo apt-install gcc-arm-embedded -y
+#sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi openocd -y
+#sudo apt-get install gdb-arm-none-eabi -y
+#sudo apt install gcc-arm-embedded -y
 sudo apt autoremove -y
 sudo ldconfig
 
@@ -40,6 +42,14 @@ autoreconf -fi
 make
 sudo make install
 sudo ldconfig
+cd ..
+
+git clone git://git.osmocom.org/osmocom-bb.git
+cd osmocom-bb
+git pull --rebase
+cd src
+make -e CROSS_TOOL_PREFIX=arm-none-eabi-
+cd ..
 cd ..
 
 git clone git://git.osmocom.org/libosmo-dsp.git
@@ -137,7 +147,7 @@ cd ..
 
 git clone git://git.osmocom.org/openbsc.git
 cd openbsc/openbsc/
-autoreconf -i
+autoreconf -fi
 ./configure
 make
 sudo make install
