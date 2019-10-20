@@ -29,6 +29,15 @@ sudo make install
 sudo ldconfig -i
 cd ..
 
+git clone git://git.osmocom.org/osmocom-bb.git
+cd osmocom-bb
+git pull --rebase
+cd src
+#make -e CROSS_TOOL_PREFIX=arm-none-eabi-
+make -e CROSS_TOOL_PREFIX=arm-elf-gcc-
+cd ..
+cd ..
+
 git clone git://git.osmocom.org/libosmo-netif.git
 cd libosmo-netif
 autoreconf -fi
