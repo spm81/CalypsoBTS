@@ -21,6 +21,7 @@ sudo ldconfig
 git clone https://github.com/axilirator/gnu-arm-installer.git
 cd gnu-arm-installer
 sudo apt-get install doxygen libgmp3-dev libmpfr-dev libx11-6 libx11-dev flex bison libncurses5 libncurses5-dbg libncurses5-dev libncursesw5 libncursesw5-dbg libncursesw5-dev zlibc zlib1g-dev libmpfr4 libmpc-dev texinfo -y 
+sudo apt-get install build-essential libgmp3-dev libmpfr-dev libx11-6 libx11-dev flex bison libncurses5 libncurses5-dbg libncurses5-dev libncursesw5 libncursesw5-dbg libncursesw5-dev zlibc zlib1g-dev libmpfr4 libmpc-dev -y
 ./download.sh
 ./build.sh
 cd ..
