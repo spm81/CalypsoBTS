@@ -130,14 +130,14 @@ sudo make install
 sudo ldconfig
 cd ..
 
-git clone git://git.osmocom.org/osmo-sip-connector
-cd osmo-sip-connector
-autoreconf -fi
-./configure
-make
-sudo make install
-sudo ldconfig
-cd ..
+#git clone git://git.osmocom.org/osmo-sip-connector
+#cd osmo-sip-connector
+#autoreconf -fi
+#./configure
+#make
+#sudo make install
+#sudo ldconfig
+#cd ..
 
 sudo apt-get install libssl1.0.0 libssl-dev libpcap -y
 sudo ldconfig
@@ -159,15 +159,15 @@ make
 sudo make install
 cd ..
 
-git clone git://git.osmocom.org/openbsc.git
-cd openbsc/openbsc
-autoreconf -fi
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-./configure --enable-smpp
-make
-sudo make install
-sudo ldconfig
-cd ..
-cd ..
+#git clone git://git.osmocom.org/openbsc.git
+#cd openbsc/openbsc
+#autoreconf -fi
+#export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+#./configure --enable-smpp
+#make
+#sudo make install
+#sudo ldconfig
+#cd ..
+#cd ..
 
 sudo apt install php php-sqlite3 libncurses5-dev libjansson-dev uuid-dev sqlite3 libsqlite3-dev libxml2-dev libncurses-dev libedit-dev ntpdate -y 
