@@ -1,10 +1,14 @@
 sudo apt install libtool shtool automake autoconf git-core pkg-config make gcc -y
 sudo apt-get install build-essential libtool libtalloc-dev shtool autoconf automake git-core pkg-config make gcc g++ libpcsclite-dev libgnutls-dev -y
 sudo apt-get install build-essential libgmp-dev libx11-6 libx11-dev flex libncurses5 libncurses5-dev libncursesw5 libpcsclite-dev zlib1g-dev libmpfr4 libmpc3 lemon aptitude libtinfo-dev libtool shtool autoconf git-core pkg-config make libmpfr-dev libmpc-dev libtalloc-dev libfftw3-dev libgnutls28-dev libssl1.0-dev libtool-bin libxml2-dev sofia-sip-bin libsofia-sip-ua-dev sofia-sip-bin libncursesw5-dev libncursesw5-dbg bison libgmp3-dev alsa-oss gcc-4.9 g++-4.9 -y
-sudo apt install libdbi-dev libdbd-sqlite3 libortp-dev build-essential libtool autoconf autoconf-archive automake git-core pkg-config libtalloc-dev libpcsclite-dev libpcap-dev -y
+sudo apt install libdbd-sqlite3 libortp-dev build-essential libtool autoconf autoconf-archive automake git-core pkg-config libtalloc-dev libpcsclite-dev libpcap-dev -y
 sudo apt-get install sqlite3 libsqlite3-dev libsctp-dev -y
-sudo apt install libdbi-dev libdbd-sqlite3 build-essential libtool autoconf automake git-core pkg-config libortp-dev libtalloc-dev libpcsclite-dev libsctp-dev libsctp1 libssl-dev libc-ares-dev libgtp-dev libsofia-sip-ua-glib-dev -y
+sudo apt-get install libssl1.0.0 libssl-dev libpcap -y
+sudo apt install php php-sqlite3 libncurses5-dev libjansson-dev uuid-dev sqlite3 libsqlite3-dev libxml2-dev libncurses-dev libedit-dev ntpdate -y 
+sudo apt install libdbd-sqlite3 libortp-dev libtalloc-dev libpcsclite-dev libsctp-dev libsctp1 libssl-dev libc-ares-dev libgtp-dev libsofia-sip-ua-glib-dev -y
 #sudo apt install gcc-arm-none-eabi -y
+sudo ldconfig
+
 
 git clone https://github.com/axilirator/gnu-arm-installer.git
 cd gnu-arm-installer
@@ -29,12 +33,14 @@ sudo make install
 sudo ldconfig -i
 cd ..
 
-git clone git://git.osmocom.org/osmocom-bb.git
-cd osmocom-bb
-git pull --rebase
-cd src
-#make -e CROSS_TOOL_PREFIX=arm-none-eabi-
-make -e CROSS_TOOL_PREFIX=arm-elf-
+git clone git://git.osmocom.org/osmocom-bb.git -b jolly/testing trx
+cd trx/src/
+
+echo "CFLAGS += -DCONFIG_TX_ENABLE" >> target/firmware/Makefile
+#echo "CFLAGS += -DCONFIG_FLASH_WRITE" >> target/firmware/Makefile
+#echo "CFLAGS += -DCONFIG_FLASH_WRITE_LOADER" >> target/firmware/Makefile
+
+make HOST_layer23_CONFARGS=--enable-transceiver
 cd ..
 cd ..
 
@@ -47,15 +53,6 @@ sudo make install
 sudo ldconfig
 cd ..
 
-git clone git://git.osmocom.org/osmocom-bb.git
-cd osmocom-bb
-git pull --rebase
-cd src
-#make -e CROSS_TOOL_PREFIX=arm-none-eabi-
-make -e CROSS_TOOL_PREFIX=arm-elf-gcc-
-cd ..
-cd ..
-
 git clone git://git.osmocom.org/libosmo-dsp.git
 cd libosmo-dsp/
 autoreconf -fi
@@ -66,7 +63,7 @@ cd ..
 
 git clone git://git.osmocom.org/osmocom-bb.git -b jolly/testing trx
 cd trx/src/
-
+make -e CROSS_TOOL_PREFIX=arm-elf-gcc-
 echo "CFLAGS += -DCONFIG_TX_ENABLE" >> target/firmware/Makefile
 #echo "CFLAGS += -DCONFIG_FLASH_WRITE" >> target/firmware/Makefile
 #echo "CFLAGS += -DCONFIG_FLASH_WRITE_LOADER" >> target/firmware/Makefile
@@ -170,4 +167,3 @@ cd ..
 #cd ..
 #cd ..
 
-sudo apt install php php-sqlite3 libncurses5-dev libjansson-dev uuid-dev sqlite3 libsqlite3-dev libxml2-dev libncurses-dev libedit-dev ntpdate -y 
