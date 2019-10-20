@@ -34,7 +34,7 @@ cd osmocom-bb
 git pull --rebase
 cd src
 #make -e CROSS_TOOL_PREFIX=arm-none-eabi-
-make -e CROSS_TOOL_PREFIX=arm-elf-gcc-
+make -e CROSS_TOOL_PREFIX=arm-elf-
 cd ..
 cd ..
 
@@ -73,17 +73,6 @@ echo "CFLAGS += -DCONFIG_TX_ENABLE" >> target/firmware/Makefile
 
 make HOST_layer23_CONFARGS=--enable-transceiver
 cd ..
-cd ..
-
-wget https://sourceforge.net/projects/libdbi/files/libdbi/libdbi-0.8.3/libdbi-0.8.3.tar.gz/download
-tar -xvzf download
-sudo rm -r download
-cd libdbi-0.8.3
-./autogen.sh
-./configure --disable-docs
-make
-sudo make install
-sudo ldconfig
 cd ..
 
 tar -xf libdbi-drivers-0.8.3.alterado.tar.gz 
