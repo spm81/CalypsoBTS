@@ -110,5 +110,7 @@ Original link: https://osmocom.org/projects/baseband/wiki/CalypsoBTS
 https://www.smartspate.com/how-to-create-2g-network-at-your-own-home/ \
 https://security-bits.de/research/cellular/lab_setup \
 https://weekly-geekly.github.io/articles/331406/index.html \
-https://habr.com/ru/post/258661/
+https://habr.com/ru/post/258661/ \
+https://cn0xroot.com/2017/04/11/getting-started-with-3g-ip-access-nano3gopenbscosmocom-bb-part-1/
+
 
