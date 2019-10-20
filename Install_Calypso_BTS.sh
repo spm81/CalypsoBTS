@@ -43,7 +43,7 @@ cd osmocom-bb
 git pull --rebase
 cd src
 #make -e CROSS_TOOL_PREFIX=arm-none-eabi-
-make
+make -e CROSS_TOOL_PREFIX=arm-elf-gcc-
 cd ..
 cd ..
 
