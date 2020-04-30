@@ -102,14 +102,15 @@ You should see something like this:
 If something goes wrong, find another ARFCN and try again.\
 As soon as you get the transceiver synchronized, just keep it running.
 
+# Start MSC,HLR and SMS Center
+EX:
+cd /root/.osmocom
+osmo-nitb -c ~/.osmocom/open-bsc.cfg -l ~/.osmocom/hlr.sqlite3 -P -C --debug=DRLL:DCC:DMM:DRR:DRSL:DNM
 
-# Initialize the first Transceiver
-cd /root/osmocom/trx/src
-host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 -s /tmp/osmocom_l2 -c target/firmware/board/compal_e88/trx.highram.bin -r 99
-
-# Initialize the Second Tranceiver (for Voice)
-cd /root/osmocom/trx/src
-host/osmocon/osmocon -m c123xor -p /dev/ttyUSB1 -s /tmp/osmocom_l2.2 -c target/firmware/board/compal_e88/trx.highram.bin -r 99
+# Start the base Station
+EX:
+cd /root/.osmocom
+osmo-bts-trx -c ~/.osmocom/open-bts.cfg --debug DRSL:DOML:DLAPDM
 
 
 # + INFO:
