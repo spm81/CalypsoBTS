@@ -103,6 +103,15 @@ If something goes wrong, find another ARFCN and try again.\
 As soon as you get the transceiver synchronized, just keep it running.
 
 
+# Initialize the first Transceiver
+cd /root/osmocom/trx/src
+host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 -s /tmp/osmocom_l2 -c target/firmware/board/compal_e88/trx.highram.bin -r 99
+
+# Initialize the Second Tranceiver (for Voice)
+cd /root/osmocom/trx/src
+host/osmocon/osmocon -m c123xor -p /dev/ttyUSB1 -s /tmp/osmocom_l2.2 -c target/firmware/board/compal_e88/trx.highram.bin -r 99
+
+
 # + INFO:
 
 Original link: https://osmocom.org/projects/baseband/wiki/CalypsoBTS
