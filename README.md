@@ -42,6 +42,9 @@ Time-division (TDMA) systems require very accurate counting of the time segments
 The satellite systems, such as GPS and Iridium, do have pretty accurate clock that is being distributed in addition to the prime services (location, calls, etc). They could be used (and often used in commercial networks) for synchronization purposes. This approach would require one to have a corresponding receiver and a direct sky view, but there is a simpler way. We can use the SCH clock indications from existing base stations, eventually a phone is designed to do that!
 
 So, use RSSI or cell_log applications to find cells with good signal and remember the ARFCN numbers. One of them will be used as a clock source for our own base station.
+
+EX: host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 -c target/firmware/board/compal_e88/rssi.highram.bin
+
 Usage
 
 1. First, you need to run the transceiver firmware:
