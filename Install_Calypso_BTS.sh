@@ -6,7 +6,7 @@ sudo apt-get install build-essential libgmp-dev libx11-6 libx11-dev flex libncur
 sudo apt install libdbd-sqlite3 libortp-dev build-essential libtool autoconf autoconf-archive automake git-core pkg-config libtalloc-dev libpcsclite-dev libpcap-dev -y
 sudo apt-get install sqlite3 libsqlite3-dev libsctp-dev -y
 sudo apt-get install gcc-4.9 g++-4.9 -y
-sudo apt install libdbi-dev -y
+#sudo apt install libdbi-dev -y
 sudo apt-get install libssl1.0.0 libssl-dev -y
 sudo apt install php php-sqlite3 libncurses5-dev libjansson-dev uuid-dev sqlite3 libsqlite3-dev libxml2-dev libncurses-dev libedit-dev ntpdate -y 
 sudo apt install libdbd-sqlite3 libortp-dev libtalloc-dev libpcsclite-dev libsctp-dev libsctp1 libc-ares-dev libgtp-dev libsofia-sip-ua-glib-dev libpcap-dev libpcap0.8 libpcap0.8-dbg libpcap0.8-dev -y
@@ -32,6 +32,7 @@ cd ..
 sudo chmod 777 ~/./.bashrc
 sudo echo 'export PATH=$PATH:'"$(sudo find /| grep ".*gnu-arm-installer/install/bin" -o -m1)" >> ~/./.bashrc
 sudo chmod 644 ~/./.bashrc
+export PATH=$PATH:'"$(sudo find /| grep ".*gnu-arm-installer/install/bin" -o -m1)"
 
 git clone git://git.osmocom.org/libosmocore.git
 cd libosmocore/
@@ -77,6 +78,17 @@ git clone git://git.osmocom.org/libosmo-netif.git
 cd libosmo-netif
 autoreconf -fi
 ./configure
+make
+sudo make install
+sudo ldconfig
+cd ..
+
+sudo apt-get install sqlite3 libsqlite3-dev libsctp-dev
+wget -O libdbi-0.8.3.tar.gz https://sourceforge.net/projects/libdbi/files/libdbi/libdbi-0.8.3/libdbi-0.8.3.tar.gz/download
+tar -xvzf libdbi-0.8.3.tar.gz
+cd libdbi-0.8.3
+autogen.sh
+./configure --disable-docs
 make
 sudo make install
 sudo ldconfig
@@ -146,9 +158,11 @@ cd ..
 #sudo ldconfig
 #cd ..
 
+sudo apt-get install libssl1.0.0 libssl-dev
+sudo ldconfig
 git clone git://git.osmocom.org/openbsc.git
 cd openbsc/openbsc/
-autoreconf -fi
+autoreconf -i
 ./configure
 make
 sudo make install
@@ -161,16 +175,4 @@ autoreconf -i
 ./configure --enable-trx
 make
 sudo make install
-cd ..
-
-#git clone git://git.osmocom.org/openbsc.git
-#cd openbsc/openbsc
-#autoreconf -fi
-#export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-#./configure --enable-smpp
-#make
-#sudo make install
-#sudo ldconfig
-#cd ..
-#cd ..
 
