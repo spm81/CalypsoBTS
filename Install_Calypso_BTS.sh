@@ -1,4 +1,4 @@
-sudo apt install libtool shtool automake autoconf git-core pkg-config make gcc libusb-1.0 dahdi -y
+sudo apt install libtool shtool automake autoconf git-core pkg-config make gcc libusb-1.0 dahdi dahdi-source -y
 sudo apt-get install build-essential libtool libtalloc-dev shtool autoconf automake git-core pkg-config make gcc g++ libpcsclite-dev -y
 sudo apt-get install libgnutls-dev -y
 sudo apt-get install libgnutls28-dev -y
