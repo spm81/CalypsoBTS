@@ -175,4 +175,6 @@ autoreconf -i
 ./configure --enable-trx
 make
 sudo make install
+cd ..
+ls
 
