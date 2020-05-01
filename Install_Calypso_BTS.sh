@@ -32,7 +32,7 @@ cd ..
 sudo chmod 777 ~/./.bashrc
 sudo echo 'export PATH=$PATH:'"$(sudo find /| grep ".*gnu-arm-installer/install/bin" -o -m1)" >> ~/./.bashrc
 sudo chmod 644 ~/./.bashrc
-export PATH=$PATH:'"$(sudo find /| grep ".*gnu-arm-installer/install/bin" -o -m1)"
+export PATH=$PATH:'"$(sudo find /| grep ".*gnu-arm-installer/install/bin" -o -m1)"'
 
 git clone git://git.osmocom.org/libosmocore.git
 cd libosmocore/
